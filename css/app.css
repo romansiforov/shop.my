@@ -1,0 +1,75 @@
+/* some comment can be placed here */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,700&display=swap');
+
+html {
+    --ancor-color: #130f40;
+    font-family: Roboto, sans-serif;
+    font-size: 100%;
+}
+
+body {
+    /* font-family: Roboto, sans-serif; */
+    font-size: 1.15rem;
+}
+
+
+
+/* navigation */
+
+a {
+    text-decoration: none;
+}
+
+.page-header {
+    color:rgb(54, 30, 30);
+}
+
+.brand {
+    color: red;
+}
+
+.navbar {
+
+}
+
+.navbar a {
+    color:var(--ancor-color);
+}
+
+.toolbar {
+
+}
+
+/* hero */
+
+.hero {
+    background-color: beige;
+}
+
+.bg-hero {
+
+}
+
+.hero h2 {
+    /* font-size: 1.15em; */
+
+    font-size: calc(1.345rem + 1.15vm);
+    font-weight: 800;
+}
+
+/* backgrounds */
+
+.bg-cover {
+    background-size: cover !important;
+}
+
+
+.bg-center {
+    background-position: center center !important;
+}
+
+.footer-socials a {
+    color: blue;
+    font-size: 2em;
+}
