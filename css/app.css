@@ -11,14 +11,23 @@ html {
 body {
     /* font-family: Roboto, sans-serif; */
     font-size: 1.15rem;
+    /* margin: 0; */
+    overflow-x: hidden;
 }
 
-
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    box-sizing: content-box;
+}
 
 /* navigation */
 
 a {
-    text-decoration: none;
+    /* text-decoration: none; */
 }
 
 .page-header {
@@ -45,6 +54,8 @@ a {
 
 .hero {
     background-color: beige;
+    overflow-y: hidden;
+    width: 100%;
 }
 
 .bg-hero {
@@ -56,6 +67,12 @@ a {
 
     font-size: calc(1.345rem + 1.15vm);
     font-weight: 800;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
 }
 
 /* backgrounds */
@@ -72,4 +89,96 @@ a {
 .footer-socials a {
     color: blue;
     font-size: 2em;
+}
+
+/* paddings */
+
+.py-0 {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+}
+
+.py-1 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.py-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.py-4 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.pX-0 {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.pX-1 {
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
+}
+
+.pX-2 {
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+.pX-3 {
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.pX-4 {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.pX-5 {
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.bg-dark {
+    background-color: black;
+}
+
+.text-white {
+    color: white;
+}
+
+.social-link{
+    color: white;
+}
+
+h2>span, p>span {
+    color: salmon;
+    font-weight: 600;
+}
+
+.product .image{
+    height: 35rem;
+    overflow: hidden;
+}
+
+.image img {
+    object-fit: cover;
 }

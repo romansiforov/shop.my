@@ -18,47 +18,74 @@
             <a href="blog.html">Blog</a>
         </nav>
         <div class="toolbar">
-            <a href="home.html">Whichlist</a>
-            <a href="about.html">Cart</a>
-            <a href="blog.html">User</a>
+            <a href="#" class="fas fa-heart">Whichlist</a>
+            <a href="#" class="fas fa-shopping-cart">Cart</a>
+            <a href="#" class="fas fa-user">User</a>
         </div>
     </header>
 
-    <section class="hero bg-hero bg-cover bg-center" style="background: url(images/02.jpg);">
-        <div class="container">
-            <h2>Hello world!</h2>
+    <section id="hero" class="hero bg-hero bg-cover bg-center" style="background: url(images/02.jpg);">
+        <div class="container py-5 align-left pX-5">
+            <p>New <span>Inspiration</span></p>
+            <h2>20% off on new season</h2>
             <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem sed praesentium natus vero voluptas eius quisquam, est culpa, 
-                adipisci magni repellendus tempore ipsum quis a optio impedit obcaecati repudiandae rem.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
+            <a href="#">Browse collection</a>
         </div>
     </section>
 
-    <h1>Hello world!</h1>
-   
-    <h3>Hello world!</h3>
-    <h4>Hello world!</h4>
-    <h5>Hello world!</h5>
-    <h6>Hello world!</h6>  
+    <section id="catalog" class="catalog">
 
-    <b>Bold</b>   <strong>Bold</strong>
-    <br>
-    <i>Italic</i> <em>Italic</em>
-    <br>
-    <small>Small</small>
-    <hr>
+        <header class="header">
+            <h2>Our <span>Products</span></h2>
+        </header>
 
-    <pre>
-        some text
-        some text
-        And some extra text 
-    </pre>
-    <div class="footer-socials">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-google-plus"></i></a>
-</div>
+        <div class="product-container">
+            <article class="product">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/03.jpg">
+                </div>
+                <div class="content">
+                    <h3>Product name</h3>
+                    <div class="price">
+                        $100
+                    </div>
+                </div>
+            </article>
+        </div>
+
+    </section>
+
+    <footer class="bg-dark text-white">
+        <div class="container">
+            <div>
+                <div>
+                    <h4>Service</h4>
+                    <ul class="link-unstyle">
+                        <li>Contact us</li>
+                        <li>Help</li>
+                        <li>Terms and Conditions</li>
+                        <li>Privacy</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Social media</h4>
+                    <ul class="link-unstyle">
+                        <li><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" class="social-link"><i class="fab fa-google-plus"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
