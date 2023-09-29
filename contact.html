@@ -21,9 +21,61 @@
             <a href="#" class="fas fa-cart-plus">Cart</a>
             <a href="#" class="far fa-user">User</a>
         </div>
+
+        <style>
+            .grid-container {
+                display: grid;
+                /* grid-template-columns: 200px 25% 7vw auto 120px; */
+                /* grid-template-columns: 1fr 25% 7vm auto 1fr; */
+                /* grid-template-columns: repeat(5, 1fr); */
+
+                gap: 1rem;
+
+                /* grid-template-areas: 
+                'header header header header'
+                'main main main sidebar'
+                'footer footer footer footer'
+                ; */
+
+
+            }
+
+            .box {
+                padding: 4rem;
+                color: white;
+                font-weight: 900;
+            }
+
+            .box1 {
+                background-color: red;
+                grid-area: header;
+            }
+
+            .box2 {
+                background-color: green;
+                grid-area: main;
+            }
+
+            .box3 {
+                background-color: gold;
+                grid-area: sidebar;
+            }
+
+            .box4 {
+                background-color: blue;
+                grid-area: footer;
+            }
+            
+            .box5 {
+                background-color: magenta;
+            }           
+
+    
+
+        </style>
     </header>
 
-    <h1>Contact us</h1>
+    <!-- <h1>Contact us</h1> -->
     <nav>
         <ul>
             <li><a href="contact.html">Contact</a></li>
@@ -32,6 +84,38 @@
             <li><a href="index.html">Root</a></li>
         </ul>
     </nav>
+
+    <!-- <section class="grid-container py-5 mb-3">
+        <div class="box box1">box 1</div>
+        <div class="box box2">box 2</div>
+        <div class="box box3">box 3</div>
+        <div class="box box4">box 4</div>
+        <div class="box box5">box 5</div>
+
+    </section> -->
+
+    <section class="container py-5">
+        <div class="contact-wrapper py-5">
+            <header class="contact-header mb-5">
+                    <h1>Contact us</h1>
+            </header>
+                <div class="contact-main">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Aliquam dolores accusamus corrupti, id adipisci culpa voluptates iste atque molestiae harum officia voluptatem pariatur, 
+                    doloribus molestias debitis facilis nulla, voluptas repellat?
+                </div>
+                <div class="contact-sidebar">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet reprehenderit magni voluptates a maiores, 
+                    numquam consequatur aliquam dolorem voluptate illum cum, dolorum, enim accusantium et dignissimos 
+                    aspernatur quae asperiores dolores.
+                </div>
+                <div class="contact-footer">
+                    Footer
+                </div>
+        </div>
+    </section>
+
+
     <footer class="bg-dark text-white py-4">
         <div class="container">
             <div class="row">

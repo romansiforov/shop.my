@@ -21,7 +21,7 @@ body {
     border: 0;
     outline: 0;
     text-decoration: none;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 .d-inline-block {
@@ -57,11 +57,17 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
 }
 
 .page-header .brand {
     color: red;
     font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .page-header  .navbar a{
@@ -91,8 +97,9 @@ a {
 
 .hero {
     background-color: beige;
-    overflow-y: hidden;
+    overflow-x: hidden;
     width: 100%;
+    margin-top: 8rem;
 }
 
 .bg-hero {
@@ -194,6 +201,10 @@ h1, h2, h3 {
     text-align: left;
 }
 
+.align-right {
+    text-align: right;
+}
+
 .text-uppercase {
     text-transform: uppercase;
 }
@@ -235,6 +246,12 @@ h2>span, p>span {
     color: salmon;
 }
 
+.product-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
 .product .image{
     height: 35rem;
     width: 100%;
@@ -249,7 +266,7 @@ h2>span, p>span {
 
 .container {
     width: 100%;
-    padding: 0 1rem 0 1rem;
+    padding: 0 1rem;
     margin: 0 auto;
 }
 
@@ -271,7 +288,7 @@ h2>span, p>span {
 }
 
 .border-top {
-    border-top: #130f40 rbba(0, 0, 0, 0.5) 2px solid;
+    border-top: #130f40 rgba(0, 0, 0, 0.5) 2px solid;
 }
 
 .pt-4 {
@@ -291,7 +308,7 @@ h2>span, p>span {
 }
 
 .bg-fixed {
-    background-attachment: fixed;
+    background-attachment: fixed !important;
 }
 
 .bg-light {
@@ -361,4 +378,107 @@ h2>span, p>span {
 .col-12 {
     width: 100%;
     flex: 0 0 auto;
+}
+
+/* contact forma */
+
+.contact-wrapper {
+    display: grid;
+    border: red 2px dashed;
+}
+
+.contact-header {
+    border: gold 2px dashed;
+    grid-row: 1;
+    grid-column: 1 / 4;
+}
+
+.contact-main {
+    border: green 2px dashed;
+    grid-row: 2 / 4;
+    grid-column: 1 / 3;
+}
+
+.contact-sidebar {
+    border: blue 2px dashed;
+    grid-row: 2 / 4;
+    grid-column: 3 / 4;
+}
+
+.contact-footer {
+    border: magenta 2px dashed;
+    
+}
+
+/* position */
+
+.icons a {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+    background-color: white;
+    color: #130f40;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.product {
+    position: relative;
+}
+
+.product .icons {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    z-index: 10;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.35em 0.65em;
+    font-size: 0.8em;
+    font-weight: 500;
+    line-height: 1;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+}
+
+.product .badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 2;
+}
+
+.bg-sale {
+    background-color: red;
+    border-radius: 10px;
+}
+
+.bg-new {
+    background-color: green;
+    border-radius: 10px;
+}
+
+/* catalog */
+.grid-container {
+    display: grid;
+}
+
+
+.grid-container main{
+    border: green 2px dashed;
+    grid-row: auto;
+    grid-column: 2 / 5;
+}
+
+.grid-container aside{
+    border: blue 2px dashed;
+    grid-row: auto;
+    grid-column: 1 / 2;
 }
