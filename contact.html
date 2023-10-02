@@ -10,6 +10,8 @@
 <body>
     <header class="page-header">
         <a href="#" class="brand">Roman Siforov</a>
+
+        <input type="checkbox" id="toggler">
         <nav class="navbar">
             <a href="contact.html">Contact</a>
             <a href="home.html">Home</a>
@@ -99,11 +101,31 @@
             <header class="contact-header mb-5">
                     <h1>Contact us</h1>
             </header>
-                <div class="contact-main">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Aliquam dolores accusamus corrupti, id adipisci culpa voluptates iste atque molestiae harum officia voluptatem pariatur, 
-                    doloribus molestias debitis facilis nulla, voluptas repellat?
-                </div>
+            <div class="contact-main">
+                <form action="form" method="post" action="">
+                    <div class="row py-3">
+                        <div class="col-md-6">
+                            <label class="form-lable" for="name">Your First Name *</label>
+                            <input id="name" type="text" name="firs_tname" placeholder="Enter your first name" required class="form-controll">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-lable" for="last_name">Your Last Name *</label>
+                            <input id="last_name" type="text" name="last_name" placeholder="Enter your last name" required class="form-controll">
+                        </div>
+                        <div class="col-sm-12">
+                            <label class="form-lable" for="email">Your Email *</label>
+                            <input id="email" type="email" name="email" placeholder="Enter your email" required class="form-controll">
+                        </div>
+                        <div class="col-sm-12">
+                            <label class="form-lable" for="message">Your message *</label>
+                            <textarea id="message" placeholder="Enter your message" required class="form-controll"></textarea>
+                        </div>
+                        <div class="col-sm-12">
+                            <button class="btn-send" type="submit">Send message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
                 <div class="contact-sidebar">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet reprehenderit magni voluptates a maiores, 
                     numquam consequatur aliquam dolorem voluptate illum cum, dolorum, enim accusantium et dignissimos 
@@ -119,7 +141,7 @@
     <footer class="bg-dark text-white py-4">
         <div class="container">
             <div class="row">
-                <div class="col-4">
+                <div class="col-lg-4">
                     <h4>Service</h4>
                     <ul class="link-unstyle">
                         <li>Contact us</li>
@@ -128,7 +150,7 @@
                         <li>Privacy</li>
                     </ul>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4">
                     <h4>Service</h4>
                     <ul class="link-unstyle">
                         <li>Contact us</li>
@@ -137,22 +159,22 @@
                         <li>Privacy</li>
                     </ul>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4">
                     <h4>Social media</h4>
                     <ul class="link-unstyle">
-                        <li><a href="#" class="social-link"><i class="fab fa-facebook"></i></a></li>
-                        <li><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#" class="social-link"><i class="fab fa-google-plus"></i></a></li>
+                        <li><a href="#" class="social-link"><i class="fab fa-facebook"></i>facebook</a></li>
+                        <li><a href="#" class="social-link"><i class="fab fa-twitter"></i>twitter</a></li>
+                        <li><a href="#" class="social-link"><i class="fab fa-instagram"></i>instagram</a></li>
+                        <li><a href="#" class="social-link"><i class="fab fa-google-plus"></i>google-plus</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-top pt-4">
                 <div class="row">
-                    <div class="col-6 text-start">
+                    <div class="col-lg-6 text-start">
                         <p class="small text-muted">&copy; 2023 All rights reserved</p>
                     </div>
-                    <div class="col-6 text-end">
+                    <div class="col-lg-6 text-end">
                         <p class="small text-muted">Designed by <a class="text-whte" href="#">HZ</a></p>
                     </div>
                 </div>
