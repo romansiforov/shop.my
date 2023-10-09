@@ -2,8 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,600;0,700;1,400;1,700;1,800&family=Nunito:ital,wght@0,400;0,600;1,400&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap');
 
-html {
+:root{
     --ancor-color: #130f40;
+    --active-color: salmon;
+}
+
+html {
     font-family: Poppins, sans-serif;
     font-size: 77%;
 }
@@ -665,7 +669,22 @@ h2>span, p>span {
     top: 1rem;
     right: 1.5rem;
     z-index: 10;
+    z-index: -10;
 }
+
+.product:hover .icons {
+    z-index: 10;
+}
+
+.product .icons a:hover {
+    color: white;
+    background-color: var(--ancor-color);
+}
+
+.product .icons {
+    transition: all 0.3s linear;
+}
+
 
 
 .badge {
@@ -823,12 +842,6 @@ textarea.form-controll {
     padding: 0.5rem 2rem;
 }
 
-.table input[type=number] {
-    max-width: 3rem;
-    height: 1.5rem;
-    border: #ced4da 1px solid;
-}
-
 .remove {
     color: red;
 }
@@ -943,4 +956,210 @@ textarea.form-controll {
     .card-header {
         width: 100%;
     }
+}
+
+
+
+/* pseudo classes  */
+
+.table input[type=number] {
+    max-width: 3.5rem;
+    height: 2.5rem;
+    border: #ced4da 1px solid;
+}
+
+.qty input:in-range {
+    background-color: greenyellow;
+}
+
+.qty input:out-of-range {
+    background-color: rgba(255, 0, 0, .25);
+    border: 1px solid red;
+}
+
+.page-header .navbar a:hover {
+    color: var(--active-color);
+}
+
+.page-header .toolbar a:hover {
+    color: var(--active-color);
+    padding: 0.5rem;
+}
+
+.btn-send:hover {
+    background-color: white;
+    color: var(--active-color);
+    border-color: var(--active-color);
+    font-weight: 600;
+    border-width: 2px;
+}
+
+.navbar a {
+    position: relative;
+}
+
+.page-header .navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid var(--active-color);
+
+}
+
+.page-header .navbar a:hover::after {
+    width: 100%;
+}
+
+.footer ul li.footer-link {
+    position: relative;
+}
+
+.footer-link::before {
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "\f152";
+    font-family: "Font Awesome 5 Free";
+    color: white;
+    opacity: 0;
+}
+
+.footer-link:hover::before {
+    opacity: 1;
+
+}
+
+.footer-link:hover {
+    padding-left: 1rem;
+    color: white;
+    
+}
+
+
+.table tr:nth-child(even) {
+    background-color: rgba(0,0,0,0.025);
+}
+
+.table tr:hover {
+    border:  #eed8a5 1px double;
+}
+
+.catalog-container {
+    display: flex;
+}
+
+ul.categories a {
+    text-decoration: none;
+    color: var(--ancor-color);
+    font-size: 1.2rem;
+}
+
+ul.categories a:hover {
+    color: var(--active-color);
+}
+
+
+ul.categories li:nth-child(even) {
+    background-color: rgba(0,0,0,0.025);
+}
+
+
+.product:hover .image img {
+    transition: all 0.3s linear;
+} 
+
+.product:hover .image img {
+    /* transform: rotate(45deg); */
+    /* transform: translateX(100px); */
+    transform: scale(1.1);
+    filter:brightness(95%);
+} 
+
+/* slider */
+
+.carousel {
+    align-items: center;
+    background: white;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 5));
+    }
+}
+
+.slider {
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 960px;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.slider .slide img {
+    display: block;
+    height: 100px;
+    width: 250px;
+    object-fit: cover;
+}
+
+.slider::before, .slider::after {
+    content: "";
+    position: absolute;
+    width: 200px;
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 2;
+    height: 100px;
+}
+
+.slider::before {
+    top: 0;
+    left: 0;
+}
+
+.slider::after {
+    top: 0;
+    right: 0;
+    transform: rotateZ(180deg);
+}
+
+.slider .slider-track {
+    display: flex;
+    width: calc(250px * 10);
+    animation: scroll 40s linear infinite;
+}
+
+.category-item {
+    display: block;
+    position: relative;
+}
+
+.category-item-title {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: var(--ancor-color);
+    background-color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
